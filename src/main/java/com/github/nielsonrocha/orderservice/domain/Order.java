@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import lombok.Data;
 
@@ -28,6 +29,7 @@ public class Order implements Serializable {
 	
 	private List<OrderItems> items;
 	
+	@DBRef
 	private ShippingMethod shippingMethod;
 	
 	private Double shippingCost;

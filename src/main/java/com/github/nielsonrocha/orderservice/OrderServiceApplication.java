@@ -2,12 +2,13 @@ package com.github.nielsonrocha.orderservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-// @Import(SpringDataRestConfiguration.class) * aguardando lancamento da versao 3.0.0 do springfox swagger
+@EnableFeignClients("com.github.nielsonrocha.orderservice")
 public class OrderServiceApplication {
 
 	public static void main(String[] args) {
